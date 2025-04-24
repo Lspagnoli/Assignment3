@@ -24,5 +24,3 @@ Submit: (In One document)
     manual Test Cases with steps
     The original code and automated test cases for the "smelly" code, including two separate examples of bad smells along with a screen dump showing that the automated tests pass with the smelly code.
     The refactored code and automated test cases along with a screen dump showing that the automated tests pass with the refactored code.
-
-Rubric
