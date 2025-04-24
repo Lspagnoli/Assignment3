@@ -46,12 +46,15 @@ class TestGradeSystem(unittest.TestCase):
 
     def test_average_grade(self):
         self.assertAlmostEqual(self.gs.L7, sum(self.gs.L2) / len(self.gs.L2))
+        print("test_average_grade [PASSED]")
 
     def test_students_with_A(self):
         self.assertListEqual(self.gs.L10, ["Bob", "Joane", "James"])
+        print("test_students_with_A [PASSED]")
 
     def test_all_passed(self):
         self.assertTrue(self.gs.L15)
+        print("test_all_passed [PASSED]")
 
 if __name__ == '__main__':
     unittest.main()

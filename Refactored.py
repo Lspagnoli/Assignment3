@@ -50,27 +50,34 @@ class TestGradeSystem(unittest.TestCase):
     def test_average_grade(self):
         expected_avg = sum(s["grade"] for s in self.gs.students) / len(self.gs.students)
         self.assertAlmostEqual(self.gs.average_grade, expected_avg)
+        print("test_average_grade [PASSED]")
 
     def test_name_to_grade_map(self):
         for student in self.gs.students:
             self.assertEqual(self.gs.name_to_grade[student["name"]], student["grade"])
+        print("test_name_to_grade_map [PASSED]")
 
     def test_highest_grade(self):
         self.assertEqual(self.gs.highest_grade, max(s["grade"] for s in self.gs.students))
+        print("test_highest_grade [PASSED]")
 
     def test_lowest_grade(self):
         self.assertEqual(self.gs.lowest_grade, min(s["grade"] for s in self.gs.students))
+        print("test_lowest_grade [PASSED]")
 
     def test_a_students(self):
         expected_a_students = [s["name"] for s in self.gs.students if s["grade"] >= 90]
         self.assertListEqual(self.gs.a_students, expected_a_students)
+        print("test_a_students [PASSED]")
 
     def test_everyone_passed(self):
         self.assertTrue(self.gs.everyone_passed)
+        print("test_everyone_passed [PASSED]")
 
     def test_sorted_students(self):
         grades = [s["grade"] for s in self.gs.sorted_students]
         self.assertEqual(grades, sorted(grades, reverse=True))
+        print("test_sorted_students [PASSED]")
 
 if __name__ == '__main__':
     unittest.main()
